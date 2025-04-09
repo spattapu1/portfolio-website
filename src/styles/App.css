@@ -1,0 +1,15 @@
+.App {
+    text-align: center;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  .App-header {
+    font-family: 'Arial', sans-serif;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    color: #2e3a59;
+  }
+  

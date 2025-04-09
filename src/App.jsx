@@ -1,26 +1,14 @@
 import React from 'react';
 import './App.css';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
-
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      
-      {/* Main content area */}
-      <main>
-        <Home />
-        <Projects />
-        <Contact />
-      </main>
-
-      <Footer />
+      <header className="App-header">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm [Your Name], a passionate web developer. This is where I showcase my work.</p>
+        <p>Check out my projects below and feel free to reach out through the contact section!</p>
+      </header>
     </div>
   );
 }
