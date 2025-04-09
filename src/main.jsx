@@ -1,14 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'  // Make sure App.jsx exists in the same directory
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';  // Make sure this points to the correct location of your App component
+import './index.css';     // Import your CSS file
 
-// Get the root element to mount your app
-const rootElement = document.getElementById('app')
-const root = ReactDOM.createRoot(rootElement)
-
-// Render your React application inside the root div
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-)
+);
