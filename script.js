@@ -47,8 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load and display projects from projects.json
     loadProjects();
 
-    // Handle experience section company selection
-    setupExperienceTabs();
+    // Load and display experience from experience.json
+    loadExperience();
+
+    // Setup scroll animations
+    setupScrollAnimations();
 
     // Scroll a bit down when "Let's connect" is clicked
     const scrollCta = document.getElementById('scroll-cta');
@@ -126,6 +129,84 @@ function displayProjects(projects) {
     }).join('');
     
     container.innerHTML = projectsHTML;
+    reapplyFadeInClasses();
+}
+
+// Function to load experience from JSON file
+async function loadExperience() {
+    try {
+        const response = await fetch('experience.json');
+        const experiences = await response.json();
+        displayExperience(experiences);
+    } catch (error) {
+        console.error('Error loading experience:', error);
+        // Fallback: display error message
+        const companyList = document.getElementById('company-list');
+        const experienceDetails = document.getElementById('experience-details');
+        companyList.innerHTML = '<div class="content-item"><p>Error loading experience. Please try again later.</p></div>';
+        experienceDetails.innerHTML = '';
+    }
+}
+
+// Function to display experience in the DOM
+function displayExperience(experiences) {
+    const companyList = document.getElementById('company-list');
+    const experienceDetails = document.getElementById('experience-details');
+    
+    if (!experiences || experiences.length === 0) {
+        companyList.innerHTML = '<div class="content-item"><p>No experience available at the moment.</p></div>';
+        experienceDetails.innerHTML = '';
+        return;
+    }
+    
+    // Generate company list HTML
+    const companyListHTML = experiences.map((experience, index) => {
+        const companyId = experience.company.toLowerCase().replace(/\s+/g, '');
+        const isActive = index === 0 ? 'active' : '';
+        return `
+            <div class="company-item ${isActive}" data-company="${companyId}">
+                <h3>${experience.company}</h3>
+                <span class="company-role">${experience.role}</span>
+            </div>
+        `;
+    }).join('');
+    
+    // Generate experience details HTML
+    const experienceDetailsHTML = experiences.map((experience, index) => {
+        const companyId = experience.company.toLowerCase().replace(/\s+/g, '');
+        const isActive = index === 0 ? 'active' : '';
+        
+        // Create bullets HTML
+        const bulletsHTML = experience.bullets.map(bullet => `<li>${bullet}</li>`).join('');
+        
+        // Create technologies HTML
+        const technologies = experience.technologies.split(', ').map(tech => tech.trim());
+        const technologiesHTML = technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('');
+        
+        return `
+            <div class="experience-detail ${isActive}" id="${companyId}">
+                <div class="experience-header">
+                    <div class="experience-title-section">
+                        <h2>${experience.role}</h2>
+                        <span class="experience-date">${experience.dates}</span>
+                    </div>
+                </div>
+                <ul class="experience-bullets">
+                    ${bulletsHTML}
+                </ul>
+                <div class="experience-tech">
+                    ${technologiesHTML}
+                </div>
+            </div>
+        `;
+    }).join('');
+    
+    companyList.innerHTML = companyListHTML;
+    experienceDetails.innerHTML = experienceDetailsHTML;
+    
+    // Setup experience tabs after content is loaded
+    setupExperienceTabs();
+    reapplyFadeInClasses();
 }
 
 // Function to setup experience section tabs
@@ -152,5 +233,115 @@ function setupExperienceTabs() {
                 targetDetail.classList.add('active');
             }
         });
+    });
+}
+
+// Function to setup scroll animations
+function setupScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-visible');
+            }
+        });
+    }, observerOptions);
+
+    // Add fade-in class to elements that should animate
+    addFadeInClasses();
+    
+    // Observe all fade-in elements
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// Function to add fade-in classes to elements
+function addFadeInClasses() {
+    // About section
+    const aboutContent = document.querySelector('.about-content');
+    if (aboutContent) {
+        aboutContent.classList.add('fade-in');
+    }
+
+    // Experience section
+    const experienceLayout = document.querySelector('.experience-layout');
+    if (experienceLayout) {
+        experienceLayout.classList.add('fade-in');
+    }
+
+    // Projects section
+    const projectsContainer = document.getElementById('projects-container');
+    if (projectsContainer) {
+        projectsContainer.classList.add('fade-in');
+    }
+
+    // Skills list items
+    const skillsList = document.querySelector('.skills-list');
+    if (skillsList) {
+        const skillsItems = skillsList.querySelectorAll('li');
+        skillsItems.forEach((item, index) => {
+            item.classList.add('fade-in', `fade-in-delay-${Math.min(index + 1, 5)}`);
+        });
+    }
+
+    // Experience bullets
+    const experienceBullets = document.querySelectorAll('.experience-bullets li');
+    experienceBullets.forEach((bullet, index) => {
+        bullet.classList.add('fade-in', `fade-in-delay-${Math.min(index + 1, 5)}`);
+    });
+
+    // Project items
+    const projectItems = document.querySelectorAll('.content-item');
+    projectItems.forEach((item, index) => {
+        item.classList.add('fade-in', `fade-in-delay-${Math.min(index + 1, 5)}`);
+    });
+
+    // Tech tags
+    const techTags = document.querySelectorAll('.tech-tag, .tech-pill');
+    techTags.forEach((tag, index) => {
+        tag.classList.add('fade-in', `fade-in-delay-${Math.min(index + 1, 5)}`);
+    });
+
+    // Section titles
+    const sectionTitles = document.querySelectorAll('section h1');
+    sectionTitles.forEach((title) => {
+        title.classList.add('fade-in');
+    });
+}
+
+// Function to reapply fade-in classes after dynamic content loads
+function reapplyFadeInClasses() {
+    // Remove existing fade-in classes first
+    const existingFadeInElements = document.querySelectorAll('.fade-in');
+    existingFadeInElements.forEach(element => {
+        element.classList.remove('fade-in', 'fade-in-visible', 'fade-in-delay-1', 'fade-in-delay-2', 'fade-in-delay-3', 'fade-in-delay-4', 'fade-in-delay-5');
+    });
+
+    // Reapply classes
+    addFadeInClasses();
+    
+    // Reobserve elements
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-visible');
+            }
+        });
+    }, observerOptions);
+
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    fadeInElements.forEach(element => {
+        observer.observe(element);
     });
 } 

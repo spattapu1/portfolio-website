@@ -1,0 +1,20 @@
+[
+  {
+    "company":"Indegeos",
+    "role":"UX Data Science Intern",
+    "dates":"Oct 2024 – Jan 2025",
+    "bullets":["Designed accessible UI improvements for satellite mapping tools", 
+              "Built XGBoost models to predict land prices using geospatial data",
+              "Collaborated with product and engineering to iterate on features using user feedback"],
+    "technologies": "UX Design, XGBoost, Geospatial Data, Python"
+  },
+  {
+    "company":"LoveMeBad",
+    "role":"Founder & Creative Lead",
+    "dates":"Mar 2020 – May 2024",
+    "bullets":["Scaled brand to 700+ orders and $3.2K+ revenue through digital marketing",
+              "Managed operations, manufacturing, and customer support",
+              "Analyzed sales data to guide product development and increase AOV by 20%"],
+    "technologies": "E-commerce, Digital Marketing, Data Analysis, Operations"
+  }
+]
