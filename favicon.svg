@@ -1,0 +1,16 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="star-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#AB26A6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#AB26A6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Glow circle -->
+  <circle cx="16" cy="16" r="14" fill="url(#star-glow)"/>
+  <!-- Star -->
+  <polygon points="16,2 19,10 28,10 21,16 25,28 16,22 7,28 11,16 4,10 13,10" 
+           fill="none" 
+           stroke="white" 
+           stroke-width="2.5" 
+           filter="drop-shadow(0 0 5px white)"/>
+</svg> 
