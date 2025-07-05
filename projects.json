@@ -1,0 +1,41 @@
+
+[
+  {
+    "title": "The Myth of the Cheaper Generic",
+    "image": "images/project1.png",
+    "year": "Fall 2025",
+    "technologies": ["Python", "Pandas", "Plotly"],
+    "description": "Are Generic Brands actually cheaper? This project aims to visualize the price differences between generic and brand-name products a few categories accross 3 major U.S Supermarket Giants. The goal is to provide a clear and informative representation of the data, allowing users to easily compare prices and make informed decisions."
+  },
+  {
+    "title": "Persuasive or Deceptive Visualization?",
+    "url": "https://spattapu1.github.io/dsc106-2025-spring/labs/1/project2.html",
+    "year": "Fall 2025",
+    "technologies": ["Python", "Pandas", "Plotly", "Photoshop"],
+    "description": "Visualizations that are meant to persuade can be misleading. This project aims to analyze how the same data can be visuulaized to convey opposite messages. This was done through the use of NYPD complaints data between White and Black civillians."
+  },
+  {
+    "title": "Bike Watching",
+    "url": "https://spattapu1.github.io/dsc106-lab7/",
+    "year": "Fall 2025",
+    "technologies": ["Python", "Plotly", "Mapbox", "HTML", "CSS", "JavaScript", "D3.js"],
+    "repository": "https://github.com/spattapu1/dsc106-lab7",
+    "description": "Bike Watching is a project that visualizes bike arrivals and departures in the City of Boston using the mapbox API. Larger circles represent the number of bikes arriving or departing at a given time. The project aims to provide an interactive and informative visualization of bike traffic in the city."
+  }, 
+  {
+    "title": "The Hidden Science of Sleep",
+    "url": "https://spattapu1.github.io/SleepTracker/",
+    "year": "Spring 2025",
+    "technologies": ["Python", "Plotly", "HTML", "CSS", "JavaScript", "D3.js"],
+    "repository": "https://github.com/spattapu1/SleepTracker",
+    "description": "Bike Watching is a project that visualizes bike arrivals and departures in the City of Boston using the mapbox API. Larger circles represent the number of bikes arriving or departing at a given time. The project aims to provide an interactive and informative visualization of bike traffic in the city."
+  },
+  {
+    "title": "League of Legends Statistical Analysis",
+    "url": "https://spattapu1.github.io/LoL-Statistical-Analysis/",
+    "year": "Winter 2025",
+    "technologies": ["Python", "Plotly", "Scikit-learn", "Pandas", "Numpy"],
+    "repository": "https://github.com/spattapu1/LoL-Statistical-Analysis",
+    "description": "League of Legends Statistical Analysis is a project that explores and visualizes various statistics from the popular game League of Legends. The project aims to provide insights into player performance, champion statistics, and game outcomes through interactive visualizations."
+  }
+]

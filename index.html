@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ballet:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+      <div class="nav-left">
+        <a href="#home" class="nav-name">Shriya Pattapu</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+      </div>
+      <div class="nav-right">
+        <a href="mailto:pattapu.shriya@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/shriyapattapu" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </nav>
+
+    <section id="home">
+        <div class="svg-hero-anim">
+          <svg width="140" height="140" viewBox="0 0 96 96">
+            <defs>
+              <radialGradient id="star-glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#C0D9F7" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="#AB26A6" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <circle cx="48" cy="48" r="22" fill="url(#star-glow)" class="star-glow"/>
+            <polygon class="star" points="48,28 52,40 66,40 54,48 58,62 48,54 38,62 42,48 30,40 44,40"/>
+          </svg>
+        </div>
+        <h1>Hey, I'm Shriya!</h1>
+        <h2>Data Science · Product Thinking · Design · Economics · Business</h2>
+
+        <div class="scroll-cta" id="scroll-cta">
+            <p>Here's a little more about me ↓</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1>⊹ About Me ⊹</h1>
+        <div class="about-content">
+          <img src="images/about_me.png" alt="Shriya Pattapu" class="profile-photo">
+          <div class="about-text">
+            <p>
+              I'm currently studying Business Economics at UCSD, graduating in 2026, with minors in Design and Data Science. I love exploring the intersection of design and technology to create meaningful, human-centered experiences.
+            </p>
+      
+            <div class="skills-section">
+              <h3>Probably playing with:</h3>
+              <ul class="skills-list">
+                <li>Java</li>
+                <li>Tableau</li>
+                <li>SQL</li>
+                <li>Web Development</li>
+                <li>Figma</li>
+                <li>Power BI</li>
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+              </ul>
+            </div>
+      
+            <p>
+              Outside of that, I’m usually making something — ceramics, stickers, art, music, or food.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+
+    <section id="experience">
+        <h1>⊹ Experience ⊹</h1>
+        <div class="experience-layout">
+            <div class="company-list">
+                <div class="company-item active" data-company="indgeos">
+                    <h3>Indgeos</h3>
+                    <span class="company-role">UX Data Science Intern</span>
+                </div>
+                <div class="company-item" data-company="lovemebad">
+                    <h3>LoveMeBad</h3>
+                    <span class="company-role">Founder & Creative Lead</span>
+                </div>
+            </div>
+            
+            <div class="experience-details">
+                <div class="experience-detail active" id="indgeos">
+                    <div class="experience-header">
+                        <div class="experience-title-section">
+                            <h2>UX Data Science Intern</h2>
+                            <span class="experience-date">Oct 2024 – Jan 2025</span>
+                        </div>
+                    </div>
+                    <ul class="experience-bullets">
+                        <li>Designed accessible UI improvements for satellite mapping tools</li>
+                        <li>Built XGBoost models to predict land prices using geospatial data</li>
+                        <li>Collaborated with product and engineering to iterate on features using user feedback</li>
+                    </ul>
+                    <div class="experience-tech">
+                        <span class="tech-tag">UX Design</span>
+                        <span class="tech-tag">XGBoost</span>
+                        <span class="tech-tag">Geospatial Data</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                </div>
+                
+                <div class="experience-detail" id="lovemebad">
+                    <div class="experience-header">
+                        <div class="experience-title-section">
+                            <h2>Founder & Creative Lead</h2>
+                            <span class="experience-date">Mar 2020 – May 2024</span>
+                        </div>
+                    </div>
+                    <ul class="experience-bullets">
+                        <li>Scaled brand to 700+ orders and $3.2K+ revenue through digital marketing</li>
+                        <li>Managed operations, manufacturing, and customer support</li>
+                        <li>Analyzed sales data to guide product development and increase AOV by 20%</li>
+                    </ul>
+                    <div class="experience-tech">
+                        <span class="tech-tag">E-commerce</span>
+                        <span class="tech-tag">Digital Marketing</span>
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">Operations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h1>⊹ Projects ⊹</h1>
+        <div class="content-grid" id="projects-container">
+            <!-- Projects will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Shriya Pattapu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
