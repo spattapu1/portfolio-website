@@ -2,20 +2,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get all navigation links
     const navLinks = document.querySelectorAll('nav a');
     
-    // Add smooth scrolling to navigation links
+    // Add smooth scrolling to navigation links (only for internal links)
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
+            const href = this.getAttribute('href');
             
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+            // Only handle internal links (those starting with #)
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             }
+            // External links (email, GitHub, LinkedIn) will open in new tab as intended
         });
     });
     
