@@ -9,7 +9,7 @@
   },
   {
     "title": "Persuasive or Deceptive Visualization?",
-    "url": "https://spattapu1.github.io/dsc106-2025-spring/labs/1/project2.html",
+    "url": "project2.html",
     "year": "Fall 2025",
     "technologies": ["Python", "Pandas", "Plotly", "Photoshop"],
     "description": "Visualizations designed to persuade can often be misleading. This project explores how the same data can be presented to convey opposing messages, using NYPD complaint data involving White and Black civilians as a case study."
