@@ -508,7 +508,95 @@ section p {
     transform: translateY(-2px);
 }
 
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
+    /* Navigation */
+    nav {
+        padding: 0.5rem 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .nav-left {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .nav-name {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+    
+    .nav-left a {
+        font-size: 0.9rem;
+    }
+    
+    .nav-right {
+        gap: 0.8rem;
+    }
+    
+    .nav-right a {
+        font-size: 1rem;
+    }
+    
+    /* Sections */
+    section {
+        padding: 0.5rem 1rem;
+        min-height: auto;
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
+    
+    section h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    #about h1, #experience h1, #projects h1 {
+        padding: 0 1rem;
+        text-align: center;
+    }
+    
+    #home h1 {
+        font-size: 2.5rem;
+    }
+    
+    #home h2 {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+    
+    /* About Section */
+    .about-content {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+    
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    .skills-list {
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    
+    .skills-list li {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    /* Experience Section */
     .experience-layout {
         flex-direction: column;
         gap: 2rem;
@@ -517,10 +605,22 @@ section p {
     .company-list {
         flex: none;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     }
     
     .company-item {
         padding: 1rem;
+        text-align: center;
+    }
+    
+    .company-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .company-role {
+        font-size: 0.9rem;
     }
     
     .experience-header {
@@ -530,6 +630,211 @@ section p {
     
     .experience-detail {
         padding: 1.5rem;
+    }
+    
+    .experience-title-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .experience-date {
+        font-size: 0.9rem;
+    }
+    
+    .experience-bullets li {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .tech-tag {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.6rem;
+    }
+    
+    /* Projects Section */
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .content-item {
+        padding: 1.5rem;
+    }
+    
+    .content-item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .content-item p {
+        font-size: 0.95rem;
+    }
+    
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    
+    .project-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .header-icons {
+        align-self: flex-end;
+    }
+    
+    .header-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+    
+    .project-description {
+        font-size: 0.95rem;
+    }
+    
+    .tech-pill {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+    
+    .project-year-small {
+        font-size: 0.75rem;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+    
+    /* Scroll CTA */
+    .scroll-cta {
+        margin-top: 2rem;
+    }
+    
+    .scroll-cta p {
+        font-size: 1rem;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    nav {
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .nav-left {
+        gap: 0.8rem;
+    }
+    
+    .nav-name {
+        font-size: 1.1rem;
+        margin-right: 0.8rem;
+    }
+    
+    .nav-left a {
+        font-size: 0.85rem;
+    }
+    
+    section {
+        padding: 0.3rem 0.8rem;
+        padding-top: 5rem;
+    }
+    
+    section h1 {
+        font-size: 1.8rem;
+    }
+    
+    #home h1 {
+        font-size: 2.2rem;
+    }
+    
+    #home h2 {
+        font-size: 1rem;
+    }
+    
+    .about-content {
+        padding: 0 0.5rem;
+    }
+    
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .about-text p {
+        font-size: 0.95rem;
+    }
+    
+    .skills-list {
+        gap: 0.6rem;
+    }
+    
+    .skills-list li {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .company-item {
+        padding: 0.8rem;
+    }
+    
+    .company-item h3 {
+        font-size: 1rem;
+    }
+    
+    .company-role {
+        font-size: 0.85rem;
+    }
+    
+    .experience-detail {
+        padding: 1.2rem;
+    }
+    
+    .experience-title-section h2 {
+        font-size: 1.2rem;
+    }
+    
+    .experience-bullets li {
+        font-size: 0.9rem;
+    }
+    
+    .content-grid {
+        padding: 0 0.5rem;
+    }
+    
+    .content-item {
+        padding: 1.2rem;
+    }
+    
+    .content-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .content-item p {
+        font-size: 0.9rem;
+    }
+    
+    .header-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 0.75rem;
+    }
+    
+    .tech-tag, .tech-pill {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+    
+    .project-year-small {
+        font-size: 0.7rem;
+    }
+    
+    /* SVG Animation */
+    .svg-hero-anim svg {
+        width: 100px;
+        height: 100px;
     }
 }
 
