@@ -3,21 +3,21 @@
   {
     "title": "The Myth of the Cheaper Generic",
     "image": "images/project1.png",
-    "year": "Fall 2025",
+    "year": "Spring 2025",
     "technologies": ["Python", "Pandas", "Plotly"],
     "description": "This project visualizes price differences between generic and brand-name products across key categories at three major U.S. supermarket chains, helping users easily compare prices and make informed decisions."
   },
   {
     "title": "Persuasive or Deceptive Visualization?",
     "url": "project2.html",
-    "year": "Fall 2025",
+    "year": "Spring 2025",
     "technologies": ["Python", "Pandas", "Plotly", "Photoshop"],
     "description": "Visualizations designed to persuade can often be misleading. This project explores how the same data can be presented to convey opposing messages, using NYPD complaint data involving White and Black civilians as a case study."
   },
   {
     "title": "Bike Watching",
     "url": "https://spattapu1.github.io/dsc106-lab7/",
-    "year": "Fall 2025",
+    "year": "Spring 2025",
     "technologies": ["Python", "Plotly", "Mapbox", "HTML", "CSS", "JavaScript", "D3.js"],
     "repository": "https://github.com/spattapu1/dsc106-lab7",
     "description": "Bike Watching is an interactive visualization of bike arrivals and departures in Boston, built with the Mapbox API. By mapping bike activity with dynamic circle sizes, the project aims to highlight traffic patterns and support insights into urban mobility."
