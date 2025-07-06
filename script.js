@@ -113,12 +113,19 @@ function displayProjects(projects) {
             ? `<div class="header-icons">${headerIcons.join('')}</div>`
             : '';
 
+        // Always render icons above the title
+        const projectHeaderHTML = `
+            <div class="project-header">
+                ${headerIconsHTML}
+            </div>
+            <div class="project-title-box">
+                <h3>${project.title}</h3>
+            </div>
+        `;
+
         return `
             <div class="content-item">
-                <div class="project-header">
-                    <h3>${project.title}</h3>
-                    <div class="header-icons">${headerIcons.join('')}</div>
-                </div>
+                ${projectHeaderHTML}
                 <p class="project-description">${project.description}</p>
                 ${technologiesHTML}
                 <div class="project-footer">

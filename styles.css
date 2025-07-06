@@ -526,8 +526,8 @@ section p {
         margin-right: 1rem;
     }
     
-    .nav-left a {
-        font-size: 0.9rem;
+    .nav-left a:not(.nav-name) {
+        display: none;
     }
     
     .nav-right {
@@ -568,22 +568,24 @@ section p {
     /* About Section */
     .about-content {
         flex-direction: column;
-        gap: 2rem;
+        align-items: center;
+        gap: 1.2rem;
         padding: 0 1rem;
     }
-    
+    .profile-photo {
+        margin: 0 auto 1.2rem auto !important;
+        display: block;
+        align-self: center;
+        flex-shrink: 0;
+    }
     .about-text {
         text-align: center;
+        margin: 0;
+        width: 100%;
     }
     
     .about-text p {
         font-size: 1rem;
-    }
-    
-    .profile-photo {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
     }
     
     .skills-list {
@@ -761,6 +763,10 @@ section p {
     .profile-photo {
         width: 180px;
         height: 180px;
+        margin: 0 auto;
+        display: block;
+        flex-shrink: 0;
+        align-self: center;
     }
     
     .about-text p {
@@ -836,6 +842,18 @@ section p {
         width: 100px;
         height: 100px;
     }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+  .project-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  .header-icons {
+    align-self: flex-start;
+    margin-bottom: 0.2rem;
+  }
 }
 
 #projects {
@@ -1059,15 +1077,12 @@ html {
 
 .project-header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-    gap: 1rem;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
-.project-header h3 {
+.header-icons {
     margin-bottom: 0;
-    flex: 1;
 }
 
 .project-footer {
@@ -1228,4 +1243,28 @@ html {
     stroke: #AB26A6;
     filter: drop-shadow(0 0 8px #AB26A6);
   }
+}
+
+@media (max-width: 1024px) {
+  .nav-left a:not(.nav-name) {
+    display: none;
+  }
+}
+
+.project-header h3 {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.project-title-box {
+  padding: 0.7rem 1.2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+.project-title-box h3 {
+  margin: 0;
+  color: var(--purple);
+  font-size: 1.2rem;
+  font-weight: 600;
 } 
