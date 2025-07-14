@@ -6,7 +6,7 @@
     "bullets":["Designed accessible UI improvements for satellite mapping tools", 
               "Built XGBoost models to predict land prices using geospatial data",
               "Collaborated with product and engineering to iterate on features using user feedback"],
-    "technologies": "UX Design, XGBoost, Geospatial Data, Python"
+    "technologies": "UX Design, XGBoost, Geospatial Data, Python, Pandas, Scikit-learn"
   },
   {
     "company":"LoveMeBad",
@@ -15,6 +15,6 @@
     "bullets":["Scaled brand to 700+ orders and $3.2K+ revenue through digital marketing",
               "Managed operations, manufacturing, and customer support",
               "Analyzed sales data to guide product development and increase AOV by 20%"],
-    "technologies": "E-commerce, Digital Marketing, Data Analysis, Operations"
+    "technologies": "E-commerce, Digital Marketing, Shopify, Inventory Management, Data Analysis, Product Development, Product Design"
   }
 ]
