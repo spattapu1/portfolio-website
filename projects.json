@@ -1,5 +1,10 @@
 
-[
+[{
+    "title": "Event Accomadation and Friend Finder",
+    "year": "In Progress 2025",
+    "technologies": ["AWS Lambda", "AWS API Gateway", "AWS S3, Python, HTML, CSS, Javascript"],
+    "description": "This project aims to match people attending events with people who need a similar accomadation together as well as make friends at the event beforehand. This project is an MVP, and is still in progress as I hope to make it a full-fledged product."
+  },
   {
     "title": "The Myth of the Cheaper Generic",
     "image": "images/project1.png",
